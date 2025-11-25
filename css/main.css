@@ -1,0 +1,150 @@
+/* Utility Classes */
+body {
+    background-image: url(../images/background-main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Short Stack',Arial, Helvetica, sans-serif;
+    color: #524343;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Header */
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 20px 0;
+    background-color: #F5B8BC;
+}
+
+/* Todo List Styling */
+
+article {
+    width: 450px;
+    border: 6px solid #FFF;
+    border-radius: 30px;
+    margin: 30px 15px;
+    
+    background-image: url(../images/background-paper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+article > h2 {
+    padding: 4px 8px;
+    display: flex;
+    background-color: #A0C2E6;
+}
+
+article:first-of-type {
+    border-color: #A0C2E6;
+}
+
+#inprogress h2 {
+    background-color: #FDB5C1;
+}
+
+#inprogress {
+    border-color: #FDB5C1;
+}
+
+#done h2 {
+    background-color: #A1C4AF;
+}
+
+#done {
+    border-color: #A1C4AF;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+ul li {
+    padding: 6px 8px;
+}
+
+/* Alternating List Colours */
+
+.todo li:nth-child(even){
+    background-color: #A0C2E6;
+    margin-bottom: 20px;
+}
+
+.todo li:nth-child(odd){
+    background-color: #7EAFE0;
+    margin-bottom: 20px;
+}
+
+.inprogress li:nth-child(even) {
+    background-color: #FDB5C1;
+    margin-bottom: 20px;
+}
+
+.inprogress li:nth-child(odd){
+    background-color: #FD95A5;
+    margin-bottom: 20px;
+}
+
+.done li:nth-child(even) {
+    background-color: #A1C4AF;
+    margin-bottom: 20px;
+}
+
+.done li:nth-child(odd) {
+    background-color: #77B691;
+    margin-bottom: 20px;
+}
+
+/* Checked Effects */
+
+#todo input[type="checkbox"]:checked + span::after {
+    content: "\1F499";
+    margin-left: 3px;
+    filter: drop-shadow(0 0 3px #FFF);
+}
+
+#todo input:checked + span {
+    color: #1C3955;
+    font-weight: bold;
+}
+
+#inprogress input[type="checkbox"]:checked + span::after {
+    content: "\1F496";
+    margin-left: 3px;
+    filter: drop-shadow(0 0 3px #FFF);
+}
+
+#inprogress input:checked + span {
+    color: #5F1D29;
+    font-weight: bold;
+}
+
+#done input[type="checkbox"]:checked + span::after {
+    content: "\1F49A";
+    margin-left: 3px;
+    filter: drop-shadow(0 0 3px #FFF);
+}
+
+#done input:checked + span {
+    color: #134629;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer p {
+    color: #524343;
+    background-color: #F5B8BC;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px 0 0 0;
+}
